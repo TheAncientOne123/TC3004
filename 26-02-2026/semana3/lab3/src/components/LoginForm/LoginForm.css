@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+.extracto {
+  --extracto-bg: #0f1419;
+  --extracto-surface: #1a2332;
+  --extracto-border: #2d3a4f;
+  --extracto-accent: #00d4aa;
+  --extracto-accent-dim: #00a88a;
+  --extracto-text: #e6edf3;
+  --extracto-text-muted: #8b9cb3;
+
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--extracto-surface);
+  border: 1px solid var(--extracto-border);
+  border-radius: 12px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.extracto-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--extracto-border);
+}
+
+.extracto-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--extracto-text);
+  letter-spacing: 0.02em;
+}
+
+.extracto-form .field {
+  margin-bottom: 1.25rem;
+}
+
+.extracto-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--extracto-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.extracto-form input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: var(--extracto-bg);
+  border: 1px solid var(--extracto-border);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--extracto-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.extracto-form input::placeholder {
+  color: var(--extracto-text-muted);
+  opacity: 0.6;
+}
+
+.extracto-form input:focus {
+  outline: none;
+  border-color: var(--extracto-accent);
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+}
+
+.extracto-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--extracto-accent);
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--extracto-bg);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.extracto-submit:hover {
+  background: var(--extracto-accent-dim);
+}
+
+.extracto-submit:active {
+  transform: scale(0.98);
+}
+
+.extracto-output {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--extracto-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--extracto-accent);
+}
+
+.extracto-output .form-display p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--extracto-text);
+  line-height: 1.6;
+}
+
+.extracto-output .form-display strong {
+  display: inline-block;
+  min-width: 100px;
+  color: var(--extracto-text-muted);
+  font-weight: 500;
+}
