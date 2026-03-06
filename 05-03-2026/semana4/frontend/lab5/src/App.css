@@ -1,0 +1,168 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Tabla de empleados */
+.employee-list {
+  text-align: left;
+}
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
+.employee-table th {
+  background: #242424;
+  font-weight: 600;
+}
+.employee-table .employee-actions {
+  white-space: nowrap;
+}
+.employee-table .employee-actions button {
+  margin-right: 0.5rem;
+}
+.employee-table .edit-form-cell {
+  background: #f9f9f9;
+  vertical-align: top;
+}
+.employee-table .edit-form {
+  padding: 0.5rem 0;
+}
+.error {
+  color: #c00;
+}
+.edit-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+/* Formulario Agregar/Editar Empleado */
+.employee-form {
+  max-width: 400px;
+  text-align: left;
+}
+.employee-form .form-group {
+  margin-bottom: 1rem;
+}
+.employee-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+.employee-form input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: #2a2a2a;
+  border: 1px solid #4a4a4a;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.employee-form input::placeholder {
+  color: #6a6a6a;
+}
+.employee-form input:focus {
+  outline: none;
+  border-color: #6a6a6a;
+}
+.employee-form .form-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+}
+.employee-form .form-actions button[type="submit"] {
+  background: #3a3a3a;
+  color: #e0e0e0;
+  border: 1px solid #4a4a4a;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.employee-form .form-actions button[type="submit"]:hover:not(:disabled) {
+  background: #4a4a4a;
+}
+.employee-form .form-actions button[type="button"] {
+  background: transparent;
+  color: #a0a0a0;
+  border: 1px solid #4a4a4a;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.employee-form .form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.employee-form .error {
+  margin-bottom: 1rem;
+  color: #e57373;
+}
+.new-employee h3,
+.employee-list .edit-form h3 {
+  color: #a0a0a0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
