@@ -166,3 +166,236 @@
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
+
+/* ========== Sección Películas (tema cine) ========== */
+.peliculas-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #2a2a2a;
+  --cine-bg: #0d0d0d;
+  --cine-card: #161616;
+  --cine-input: #1f1f1f;
+  --cine-border: #2a2a2a;
+  --cine-text: #e8e4df;
+  --cine-muted: #8a8580;
+  --cine-accent: #c9a227;
+  --cine-accent-hover: #dbb42c;
+  --cine-accent-subtle: rgba(201, 162, 39, 0.15);
+  --cine-danger: #b85450;
+  --cine-radius: 8px;
+}
+
+.peliculas-section {
+  background: var(--cine-bg);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 1.5rem 2rem 2rem;
+  border-radius: var(--cine-radius);
+}
+
+.peliculas-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.peliculas-toolbar h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cine-accent);
+}
+
+.peliculas-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--cine-muted);
+  background: var(--cine-bg);
+  margin-top: 3rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2rem;
+  border-radius: var(--cine-radius);
+}
+.peliculas-state-error {
+  color: var(--cine-danger);
+}
+
+.btn-cine {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--cine-radius);
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-cine:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-cine-primary {
+  background: var(--cine-accent);
+  color: #0d0d0d;
+}
+.btn-cine-primary:hover:not(:disabled) {
+  background: var(--cine-accent-hover);
+}
+.btn-cine-sm {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+.btn-cine-edit {
+  background: var(--cine-accent-subtle);
+  color: var(--cine-accent);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+}
+.btn-cine-edit:hover {
+  background: rgba(201, 162, 39, 0.25);
+}
+.btn-cine-delete {
+  background: transparent;
+  color: var(--cine-danger);
+  border: 1px solid rgba(184, 84, 80, 0.5);
+}
+.btn-cine-delete:hover {
+  background: rgba(184, 84, 80, 0.15);
+}
+.peliculas-form .btn-ghost {
+  background: transparent;
+  color: var(--cine-muted);
+  border: 1px solid var(--cine-border);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.peliculas-form .btn-ghost:hover:not(:disabled) {
+  color: var(--cine-text);
+  border-color: var(--cine-muted);
+}
+
+.peliculas-form-card {
+  background: var(--cine-card);
+  border: 1px solid var(--cine-border);
+  border-radius: var(--cine-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.peliculas-form-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--cine-text);
+}
+
+.peliculas-section .peliculas-form {
+  max-width: 420px;
+}
+.peliculas-section .peliculas-form .form-group {
+  margin-bottom: 1rem;
+}
+.peliculas-section .peliculas-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--cine-muted);
+}
+.peliculas-section .peliculas-form input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background: var(--cine-input);
+  border: 1px solid var(--cine-border);
+  border-radius: 6px;
+  color: var(--cine-text);
+  font-size: 0.95rem;
+}
+.peliculas-section .peliculas-form input::placeholder {
+  color: var(--cine-muted);
+  opacity: 0.8;
+}
+.peliculas-section .peliculas-form input:focus {
+  outline: none;
+  border-color: #4a3720;
+  box-shadow: 0 0 0 2px var(--cine-accent-subtle);
+}
+.peliculas-section .peliculas-form .form-error {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(184, 84, 80, 0.15);
+  color: var(--cine-danger);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.peliculas-section .peliculas-form .form-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+}
+.peliculas-section .peliculas-form .btn-primary {
+  background: var(--cine-accent);
+  color: #0d0d0d;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.peliculas-section .peliculas-form .btn-primary:hover:not(:disabled) {
+  background: var(--cine-accent-hover);
+}
+
+.peliculas-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--cine-border);
+  border-radius: var(--cine-radius);
+  background: var(--cine-card);
+}
+
+.peliculas-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.peliculas-table th,
+.peliculas-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cine-border);
+  color: var(--cine-text);
+}
+.peliculas-table th {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cine-muted);
+  background: rgba(0, 0, 0, 0.25);
+}
+.peliculas-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+.peliculas-table tbody tr.row-editing {
+  background: var(--cine-accent-subtle);
+}
+.peliculas-table .col-id {
+  width: 3rem;
+  color: var(--cine-muted);
+}
+.peliculas-table .col-titulo {
+  font-weight: 500;
+}
+.peliculas-table .col-director,
+.peliculas-table .col-anio {
+  color: var(--cine-muted);
+}
+.peliculas-table .th-actions,
+.peliculas-table .col-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+.peliculas-table td.col-actions {
+  padding-right: 1rem;
+}

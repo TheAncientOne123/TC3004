@@ -1,12 +1,8 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import EmployeeList from './components/EmpleadosList.jsx';
+import PeliculasTable from './components/PeliculasTable.jsx';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -15,10 +11,11 @@ function App() {
 
       <main>
         <EmployeeList />
+        <PeliculasTable />
       </main>
 
       <footer>
-        <p>CRUD de Empleados © 2026</p>
+        <p>CRUD de Empleados · Películas © 2026</p>
       </footer>
     </div>
   );
