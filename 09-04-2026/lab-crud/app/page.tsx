@@ -67,7 +67,7 @@ export default function Home() {
       <table className="border-collapse border border-gray-300 w-full max-w-lg">
         <thead>
           <tr className="bg-gray-100">
-            <th className="border border-gray-300 px-4 py-2 text-left">Jugadores</th>
+            <th className="border border-gray-300 px-4 py-2 text-left">Empleados</th>
             <th className="border border-gray-300 px-4 py-2 text-center">Acciones</th>
           </tr>
         </thead>
