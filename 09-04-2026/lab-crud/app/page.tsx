@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import { useEffect, useState } from 'react';
 import {
   addDoc,
@@ -50,21 +49,50 @@ export default function Home() {
   };
 
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <h1>NextJS Firebase</h1>
+    <div className="font-sans flex flex-col items-center min-h-screen p-8 gap-8 sm:p-20">
+      <h1 className="text-2xl font-bold">NextJS Firebase</h1>
 
-      <input type="text" className="border-2" value={inputText} onChange={(e) => setInputText(e.target.value)} />
-      <button className="bg-blue-500 text-white px-4 py-2" onClick={handleAdd}>Agregar</button>
+      <div className="flex gap-2">
+        <input
+          type="text"
+          className="border-2 px-2 py-1"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+        />
+        <button className="bg-blue-500 text-white px-4 py-2" onClick={handleAdd}>
+          Agregar
+        </button>
+      </div>
 
-      <ul>
-        {items.map((item: any ) => (
-          <li key={item.id}>
-            {item.inputText}
-            <button className="bg-red-500 text-white px-2 py-1 ml-4" onClick={() => handleDelete(item.id)}>Eliminar</button>
-            <button className="bg-green-500 text-white px-2 py-1 ml-2" onClick={() => handleEdit(item.id)}>Editar</button>
-          </li> 
-        ))}
-      </ul>
+      <table className="border-collapse border border-gray-300 w-full max-w-lg">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border border-gray-300 px-4 py-2 text-left">Jugadores</th>
+            <th className="border border-gray-300 px-4 py-2 text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item:any) => (
+            <tr key={item.id} className="hover:bg-purple-50">
+              <td className="border border-gray-300 px-4 py-2">{item.inputText}</td>
+              <td className="border border-gray-300 px-4 py-2 text-center">
+                <button
+                  className="bg-green-500 text-white px-2 py-1 mr-2"
+                  onClick={() => handleEdit(item.id)}
+                >
+                  Editar
+                </button>
+                <button
+                  className="bg-red-500 text-white px-2 py-1"
+                  onClick={() => handleDelete(item.id)}
+                >
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
